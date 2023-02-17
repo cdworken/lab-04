@@ -1,3 +1,6 @@
+#Team members: Caroline Dworken and Tessa Wills
+#Github repo: https://github.com/cdworken/lab-04
+
 """EE 250L Lab 04 Starter Code
 Run vm_sub.py in a separate terminal on your VM."""
 
@@ -13,9 +16,11 @@ def on_connect(client, userdata, flags, rc):
 
 
 if __name__ == '__main__':
-    #get IP address
-    ip_address=0 
-    """your code here"""
+    #gets computer's IP address
+    ip_address = 0 
+    host_name = socket.gethostname()
+    ip_address = socket.gethostbyname(host_name)
+    
     #create a client object
     client = mqtt.Client()
     
@@ -41,11 +46,30 @@ if __name__ == '__main__':
 
     while True:
         #replace user with your USC username in all subscriptions
-        client.publish("user/ipinfo", f"{ip_address}")
+        client.publish("cdworken/ipinfo", f"{ip_address}")
         print("Publishing ip address")
         time.sleep(4)
 
         #get date and time 
-        """your code here"""
+        #get date
+        now = datetime.now()
+        today_date = now.strftime("%m/%d/%Y")
+        
+        #get time 
+        today_time = now.strftime("%H:%M:%S")
+        
+        
         #publish date and time in their own topics
-        """your code here"""
+        #publish date
+        client.publish("cdworken/date", f"{today_date}")
+        print("Publishing date")
+        time.sleep(4)
+        
+        #publish time
+        client.publish("cdworken/time", f"{today_time}")
+        print("Publishing time")
+        time.sleep(4)
+        
+        
+        
+        

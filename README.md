@@ -2,11 +2,18 @@
 [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repo and clone it to your machine to get started!
 
 ## Team Members
-- team member 1
-- team member 2
+- Caroline Dworken
+- Tessa Wills
+
+Github repo: https://github.com/cdworken/lab-04
 
 ## Lab Question Answers
 
-Answer for Question 1: 
+No Lab Questions for Lab 4.
 
-...
+Resources used for coding parts:
+
+Getting date and time: https://www.programiz.com/python-programming/datetime
+Getting ip address: https://www.c-sharpcorner.com/blogs/how-to-find-ip-address-in-python
+
+
